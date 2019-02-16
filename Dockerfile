@@ -26,26 +26,7 @@ yum update \
                           libleptonica-dev \
                           libpango1.0-0 \
                           libpango1.0-dev \
-                          libtool \
-    && git clone https://github.com/tesseract-ocr/tesseract.git \
-        && cd tesseract \
-        && ./autogen.sh \
-        && ./configure \
-        && make install \
-        && cd .. \
-    && git clone https://github.com/tesseract-ocr/tessdata.git \
-        && cd tessdata \
-        && mv * /usr/local/share/tessdata/ \
-        && cd .. \
-    && yum purge --auto-remove -y autoconf \
-                                      build-essential \
-                                      git \
-                                      libcairo2-dev \
-                                      libicu-dev \
-                                      libleptonica-dev \
-                                      libpango1.0-dev \
-                                      libtool \
-    && rm -rf tesseract tessdata /var/cache/apk/*
+                          libtool 
 
 # ENTRYPOINT ["tesseract"]
 # CMD ["-h"]
