@@ -13,7 +13,7 @@ LABEL org.label-schema.schema-version="1.0" \
 
 MAINTAINER kev <noreply@sdosoft.pro>
 
-yum update \
+RUN yum update \
     && yum install -y autoconf \
                           build-essential \
                           git \
